@@ -41,21 +41,31 @@ eth1 -> 1.1.1.1/30
 centralRouter
 
 eth1 -> 1.1.1.2/30 - link to inetRouter
+
 eth2 -> 192.168.0.1/28
+
 eth3 -> 192.168.0.33/28
+
 eth4 -> 192.168.0.65/26
 office1Router
 
 eth1 -> 192.168.0.35/28 - link to centralRouter
+
 eth2 -> 192.168.2.1/26
+
 eth3 -> 192.168.2.65/26
+
 eth4 -> 192.168.2.128/26
+
 eth5 -> 192.168.2.192/26
 office2Router
 
 eth1 -> 192.168.0.36/28 - link to centralRouter
+
 eth2 -> 192.168.1.1/25
+
 eth3 -> 192.168.1.129/25
+
 eth4 -> 192.168.2.193/26
 
 SERVERS
@@ -73,18 +83,24 @@ eth1 -> 192.168.1.129/26 - link to office2Router
 
 План проерки
 
-1.Склонировать репозитоий:
-2.Перейти в папку с заданием cd otus_linux/less19
-3.Запустить стенд vagrant up
-4.Провести тестирование
+1.Запустить стенд vagrant up
+
+2.Провести тестирование
+
 From office1Server (192.168.2.66)
 
 vagrant ssh of1Server
 
 of1Server -> of2Server ping 192.168.1.130
+
 of1Server -> centralServer ping 192.168.0.40
+
 of1Server -> office1Router ping (192.168.2.65 or 192.168.0.35)
+
 of1Server -> office2Router ping (192.168.1.129 or 192.168.0.36)
+
 of1Server -> centralRouter ping (192.168.0.33 or 1.1.1.2)
+
 of1Server -> inetRouter ping 1.1.1.1
+
 of1Server -> google ping 8.8.8.8
