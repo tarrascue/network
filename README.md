@@ -30,12 +30,12 @@ Central
 
 192.168.0.128/25 - host.min: 192.168.0.129 host.max: 192.168.0.255 broadcast: 192.168.0.255 - FREE
 
-Построение сети
-Configs
+# Построение сети
 
 ROUTERS
 
 inetRouter
+
 eth0 -> to inet
 eth1 -> 1.1.1.1/30
 centralRouter
@@ -57,6 +57,7 @@ eth1 -> 192.168.0.36/28 - link to centralRouter
 eth2 -> 192.168.1.1/25
 eth3 -> 192.168.1.129/25
 eth4 -> 192.168.2.193/26
+
 SERVERS
 
 centralServer
